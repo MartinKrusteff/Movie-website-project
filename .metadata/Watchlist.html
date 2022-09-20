@@ -1,0 +1,218 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Movielist</title>
+  </head>
+  <body class="bg-dark"  >
+    
+    <style>
+
+     
+      
+      .modal-style {
+        color: #b19540;
+        border:none;
+      }
+      .main-nav {
+        color: #b19540;
+      }
+      .media-object {
+        height: 200px;
+        float: left;
+        margin-right: 20px;
+      }
+      .col-lg-3.px-4.py-4 {
+        border-color: gold;
+        border-width: 1em;
+        border-style: double;
+      }
+      .search-container {
+        float: right;
+      }
+      .search-container button {
+        float: right;
+        padding: 6px 10px;
+        margin-top: 25px;
+        background: #ddd;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+      }
+      .title-heading input[type=text] {
+        padding: 6px;
+        margin-top: 25px;
+        font-size: 17px;
+        border: none;
+      }
+      .title-heading h1 {
+        font-size: 67px;
+        float: left;
+      }
+        </style>
+<h1 class="bg-light">Watchlist</h1>
+
+         
+    <div class="container main-nav bg-dark">
+                <div class="col-lg-12 bg-dark my-5 ">
+                    <div class="row">
+
+                      <div class="col-lg-4 px-5 mt-5">
+                        <button type="button" class="bg-dark modal-style" data-bs-toggle="modal" data-bs-target="#myModal">
+                        <div class="media">
+                          <div class="media-left">
+                            <img src="https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_.jpg" class="media-object">
+                          </div>
+                          <div class="media-body">
+                            <h4 class="media-heading">Prometheus</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                          </div>
+                        </div>
+                      </button>
+                      <div class="modal" id="myModal">
+                        <div class="modal-dialog modal-xl">
+                          <div class="modal-content bg-dark">
+                      
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                              <h4 class="modal-title">Prometheus</h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                      
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                              <div class="media">
+                                <div class="media-left">
+                                  <img src="https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_.jpg" class="media-object" style="height: 600px;">
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading">Prometheus</h4>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                              </div>
+                            </div>
+                      
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                      
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+
+                    <div class="col-lg-4 px-5 mt-5">
+                      <div class="media">
+                        <div class="media-left">
+                          <img src="https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_.jpg" class="media-object">
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Blade Runner 2049</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 px-5 mt-5">
+                      <div class="media">
+                        <div class="media-left">
+                          <img src="https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_.jpg" class="media-object">
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Blade Runner 2049</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 px-5 mt-5">
+                      <div class="media">
+                        <div class="media-left">
+                          <img src="https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_.jpg" class="media-object">
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Blade Runner 2049</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 px-5 mt-5">
+                      <div class="media">
+                        <div class="media-left">
+                          <img src="https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_.jpg" class="media-object">
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Blade Runner 2049</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 px-5 mt-5">
+                      <div class="media">
+                        <div class="media-left">
+                          <img src="https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_.jpg" class="media-object">
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Blade Runner 2049</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 px-5 mt-5">
+                      <div class="media">
+                        <div class="media-left">
+                          <img src="https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_.jpg" class="media-object">
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Blade Runner 2049</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 px-5 mt-5">
+                      <div class="media">
+                        <div class="media-left">
+                          <img src="images/bladerunner.jfif" class="media-object">
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Blade Runner 2049</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 px-5 mt-5">
+                      <div class="media">
+                        <div class="media-left">
+                          <img src="images/bladerunner.jfif" class="media-object">
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Blade Runner 2049</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                 
+                  <p id="listing">
+                  </p>
+                </div>
+            </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

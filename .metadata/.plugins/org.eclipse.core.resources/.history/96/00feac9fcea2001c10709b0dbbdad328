@@ -1,0 +1,54 @@
+package net.codejava;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import net.codejava.entities.Movie;
+import net.codejava.repo.MovieRepository;
+
+@Controller
+public class AppController3 {
+	@Autowired
+    private MovieRepository movieRepository;
+	
+	@GetMapping("/MainPage")
+		    public String listMovies(Model model){
+				List<Movie> movies = movieRepository.findAll();
+				System.out.println(movies.size());
+		        model.addAttribute("movies", movies);
+		        return "MainPage";
+		    }
+	@GetMapping("/myList")
+	public String myList(Model model) {
+		List<Movie> movies = movieRepository.findAll();
+		System.out.println(movies.size());
+        model.addAttribute("movies", movies);
+		return "MyList";
+	}
+	
+	@GetMapping("/search")
+	public String listAll(Model model) {
+		List<Movie> movies = movieRepository.findAll();
+		System.out.println(movies.size());
+        model.addAttribute("movies", movies);
+		 model.addAttribute("movies", movies);
+	        return "SearchResult";
+	
+	}
+	
+//	 @RequestMapping("/")
+//	    public String viewHomePage(Model model, @Param("keyword") String keyword) {
+ //       List<Movie> listMovies = service.listAll(keyword);
+//	        model.addAttribute("listMovies", listMovies);
+//	        model.addAttribute("keyword", keyword);
+         
+//	        return "SearchResult";
+//	    }
+
+    }

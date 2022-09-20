@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://www.markuptag.com/bootstrap/5/css/bootstrap.min.css">
+</head>
+<body class=bg-dark >
+  <style> 
+   
+.bg-black1{
+	background-color:black !important;
+}
+        .modal-style {
+        color: #b19540;
+        border:none;
+      }
+      .main-nav {
+        color: #b19540;
+      }
+      .media-object {
+        height: 200px;
+        float: left;
+        margin-right: 20px;
+      }
+      .col-lg-3.px-4.py-4 {
+        border-color: gold;
+        border-width: 1em;
+        border-style: double;
+      }
+      .search-container {
+        float: right;
+      }
+      .search-container button {
+        float: right;
+        padding: 6px 10px;
+        margin-top: 25px;
+        background: #ddd;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+      }
+      .title-heading input[type=text] {
+        padding: 6px;
+        margin-top: 25px;
+        font-size: 17px;
+        border: none;
+      }
+      .title-heading h1 {
+        font-size: 67px;
+        float: left; 
+      }
+      .btn-outline-warning{
+		color: #b19540;
+		 border-color:  #b19540;
+		
+	}
+	.d-flex{
+		margin-right: 20px;
+	}
+	.navbar-brand{
+		margin-left: 20px;
+	}
+	.container{
+		margin-top: 60px;
+	}
+        </style>
+
+
+
+
+<!-- nav bar -->
+          <div class="conteiner  ">
+            <nav class="navbar navbar-expand-lg bg-black1  ">
+                 <a th:href="${'/MainPage'}" class="navbar-brand text-white">MovieStar </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu"
+                    aria-expanded="false" aria-lable="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupprtedContent">
+                    <ul class="navbar-nav  text-center">
+                        <li>
+                            <a class="text-white nav-link" href="MyList.html">My list</a>
+                        </li>
+                        <li>
+                            <a class="text-white nav-link"  th:href="${'/login'}">Login</a>
+                        </li>
+                            <li>
+                            <a class="text-white nav-link"  th:href="${'/register'}">Register</a>
+                        </li>
+                        <li>
+                          <a class="text-white nav-link" th:href="${'/addMovie'}">Add Movie</a>
+                      </li> 
+                           
+                </div>
+                <form class=d-flex>
+                <form class="form-inline">
+                    
+                    <input type="text" class="form-control me-2 form-inline">
+                    <button type="submit" class="btn btn-outline-warning ">
+                        Search
+                    </button>
+              
+                 </form>
+            </form>
+            </nav> 
+    </div>
+       <!-- nav bar -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="login-form bg-light mt-4 p-4">
+                   
+                    <form class="row g-3">
+                      
+                      
+                        <h4 >Edit profile</h4>
+                        <div class="col-12">
+                            <label>First name</label>
+                            <input type="text" name="firstName" class="form-control" placeholder="Enter your first name here">
+                        </div> <div class="col-12">
+                            <label>Last name</label>
+                            <input type="text" name="lastName" class="form-control" placeholder="Enter your last name here">
+                        </div>
+                        <div class="col-12">
+                            <label>Email</label>
+                            <input type="email" name="email" class="form-control" placeholder="Enter your email here">
+                        </div>
+
+                        <div class="col-12">
+                            <label>Password</label>
+                            <input type="password" name="password" class="form-control" placeholder="Enter your password here">
+                        </div>
+                        
+                    
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-dark btn-outline-warning float-end">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://www.markuptag.com/bootstrap/5/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

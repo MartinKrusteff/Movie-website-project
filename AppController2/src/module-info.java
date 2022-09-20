@@ -1,0 +1,2 @@
+module AppController2 {
+}

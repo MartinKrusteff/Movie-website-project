@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"  
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://www.markuptag.com/bootstrap/5/css/bootstrap.min.css">
+</head>
+<body class="bg-dark" 
+
+style="
+font-weight:bold;
+font-family:'Montserrat', sans-serif;
+font-size:16px;
+background-image:url(night.png);
+width:100%;
+height:100%;
+padding:0px;
+margin:0px;
+">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class=" bg-light mt-4 p-4">
+                       <form th:action="@{/addMovie}" th:method="post" class="row g-3">
+                        <h5 style="font-weight: bold">Add movie by filling the fields</h5>
+                        
+                        <div class="col-12">
+                            <label>Movie title</label>
+                            <input type="text" name="title" class="form-control" placeholder="Enter movie title">
+                        </div>
+                        <div class="col-12">
+                            <label>Director</label>
+                            <input type="text" name="director" class="form-control" placeholder="Enter director">
+                        </div>
+                        <div class="col-12">
+                            <label>Film Poster</label>
+                            <input type="text" name="poster" class="form-control" placeholder="Film poster's URL">
+                        </div>
+                        <div class="col-12">
+                            <label>Film plot</label>
+                            <input type="text" name="plot" class="form-control" placeholder="More information about the movie">
+                        </div>
+                        <div class="col-12">
+                            <label>Film trailer</label>
+                            <input type="text" name="trailerurl" class="form-control" placeholder="URL of the film trailer">
+                        </div>
+                        
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-dark float-end">Add</button>
+                        </div>
+                    </form>
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://www.markuptag.com/bootstrap/5/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

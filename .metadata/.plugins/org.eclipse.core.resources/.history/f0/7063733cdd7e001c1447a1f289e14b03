@@ -1,0 +1,45 @@
+package net.codejava;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import net.codejava.entities.User;
+import net.codejava.repo.UserRepository;
+
+@Controller
+public class AppController {
+	
+	private final UserRepository userRepository;
+	
+	public AppController(UserRepository userRepository) {
+		this.userRepository = userRepository;
+	}
+	
+	@GetMapping("/")
+    public String viewMainPage(Model model) {
+        return "MainPage";
+    }
+	
+	@GetMapping("/addMovie")
+	public String showAddMoiveForm(Model model) {
+		model.addAttribute("Movie", new Object());
+		return "AddMovie";
+	}
+	
+	@PostMapping("/register")
+	public String registerUser(User model) {
+		userRepository.saveAndFlush(model);
+		return "redirect:/";
+	}
+	
+	@GetMapping("/register")
+    public String registerPage() {
+        return "Registration";
+    }
+	
+	@GetMapping("/login")
+    public String loginPage() {
+        return "login";
+    }
+}
